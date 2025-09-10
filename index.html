@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>📚 My Book Library</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <h1>📚 Book Library</h1>
+    <ul>
+      <li><a href="#books">Books</a></li>
+      <li><a href="#addBook">Add Book</a></li>
+      <li><a href="#history">History</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero Section -->
+  <header class="hero">
+    <h2>Welcome to Your Personal Book Library</h2>
+    <p>Organize, Borrow & Track your favorite books 📖</p>
+  </header>
+
+  <!-- Main Container -->
+  <main class="container">
+
+    <!-- Add Book Section -->
+    <section id="addBook" class="card">
+      <h2>➕ Add a Book</h2>
+      <div class="form-group">
+        <input type="text" id="title" placeholder="Book Title">
+        <input type="text" id="author" placeholder="Author">
+        <select id="category">
+          <option value="Fiction">Fiction</option>
+          <option value="Non-Fiction">Non-Fiction</option>
+          <option value="Science">Science</option>
+          <option value="History">History</option>
+          <option value="Biography">Biography</option>
+        </select>
+        <button onclick="addBook()">Add Book</button>
+      </div>
+    </section>
+
+    <!-- Search -->
+    <section class="card">
+      <h2>🔍 Search Books</h2>
+      <input type="text" id="search" placeholder="Search by title..." onkeyup="displayBooks()">
+    </section>
+
+    <!-- Book List -->
+    <section id="books" class="card">
+      <h2>📖 My Books</h2>
+      <div id="bookList" class="book-list"></div>
+    </section>
+
+    <!-- Borrow History -->
+    <section id="history" class="card">
+      <h2>📜 Borrow History</h2>
+      <div id="historyList" class="timeline"></div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>Made with ❤️ by Dipayan | Powered by HTML, CSS & JavaScript</p>
+  </footer>
+
+  <!-- Toast Notification -->
+  <div id="toast"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
